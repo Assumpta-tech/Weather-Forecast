@@ -9,21 +9,32 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Kigali</h1>
-          <p>
-            Wednesday 07:32, Fog
-            <br />
-            Humidity: 66%, Wind: 3.13 km/h
-          </p>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Kigali</h1>
+            <p class="weather-app-details">
+              Wednesday 07:32, Fog
+              <br />
+              Humidity: <strong>66%</strong> , Wind: <strong>3.13 km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-icon">☀️</div>
+            <div class="weather-app-temperature">21</div>
+            <div class="weather-app-unit">&deg;C</div>
+          </div>
         </div>
-        <div>☀️ 21&deg;C</div>
       </main>
 
       <footer>
