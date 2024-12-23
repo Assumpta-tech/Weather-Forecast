@@ -14,7 +14,7 @@ function refreshWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-  timeElement.innerHTML = `${date.getDay()}: ${date.getHours()}: ${date.getMinutes()}`;
+  timeElement.innerHTML = formatDate(date);
   temperatureElement.innerHTML = Math.round(temperature);
 }
 
@@ -35,6 +35,7 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   return `${day} ${hours}: ${minutes}`;
 }
 
